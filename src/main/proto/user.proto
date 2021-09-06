@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.duyminh.grpc";
+
+service HelloService {
+  rpc login(LoginRequest) returns (APIReponse);
+}
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+
+}
+message APIReponse {
+  string responsemessage =1;
+  bool status = 2;
+
+}
+
+
